@@ -1,0 +1,13 @@
+<h1>Property Binding</h1>
+
+
+
+
+<button [disabled]="isButtonDisabled" (click)="toggleButton()">
+  Toggle Disabled State
+</button>
+
+<p>
+  The button is currently <strong>{{ isButtonDisabled ? 'disabled' : 'enabled' }}</strong>.
+</p>
+

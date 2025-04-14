@@ -1,0 +1,17 @@
+<app-buildinpipes></app-buildinpipes>
+<br>
+<br>
+
+
+<h1>This custom Pipes</h1>
+<h3>{{wish | customPipe}}</h3>
+
+
+<h2>Pure vs Impure</h2>
+<button (click)="addName()">Add Name</button>
+
+<p>Pure: {{ names | pureCustom }}</p>
+<p>Impure: {{ names | impureCustom }}</p>
+<p>Updated as: {{names}}</p>
+
+<button (click)="addNameImpure()">click me addNameImpure</button>

@@ -1,0 +1,22 @@
+<h1>Structural Directives</h1>
+<h4 *ngIf="show">This is a conditional heading</h4>
+<h2 *ngIf="data">{{data}}</h2>
+<h3 *ngIf="!data">loading......</h3>
+
+
+
+
+<ol>
+  <li *ngFor="let product of products">
+    {{ product.name }} - ${{ product.price }}
+  </li>
+</ol>
+
+
+
+<div [ngSwitch]="userRole">
+  <h2 *ngSwitchCase="'admin'">Welcome Admin!</h2>
+  <h2 *ngSwitchCase="'user'">Welcome User!</h2>
+  <h2 *ngSwitchCase="'guest'">Welcome Guest!</h2>
+  <h2 *ngSwitchDefault>Please log in</h2>
+</div>

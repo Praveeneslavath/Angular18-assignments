@@ -1,0 +1,41 @@
+<br>
+<br>
+<header>Welcome to the User</header>
+<div>
+    
+    <div class="user-profile">
+        <h1>{{ user.name }}</h1>
+      
+        <!-- DatePipe -->
+        <p><strong>Birthdate:</strong> {{ user.birthDate | date: 'fullDate' }}</p>
+      
+        <!-- CurrencyPipe -->
+        <p><strong>Account Balance:</strong> {{ user.balance | currency: 'USD' }}</p>
+      
+        <!-- UpperCasePipe -->
+        <p><strong>Email (Uppercase):</strong> {{ user.email | uppercase }}</p>
+      
+        <!-- LowerCasePipe -->
+        <p><strong>Email (Lowercase):</strong> {{ user.email | lowercase }}</p>
+      
+        <!-- JsonPipe -->
+        <p><strong>Product (JSON format):</strong> {{ product | json }}</p>
+      
+        <!-- SlicePipe -->
+        <p><strong>First 3 Users (SlicePipe):</strong> {{ users | slice: 0:3 }}</p>
+      
+        <!-- DecimalPipe -->
+        <p><strong>Number (DecimalPipe):</strong> {{ number | number: '1.2-2' }}</p>
+      
+        <!-- PercentPipe -->
+        <p><strong>Number as Percent (PercentPipe):</strong> {{ number | percent }}</p>
+      
+        
+    </div>
+      
+
+</div>
+<footer>copy-righter2025</footer>
+
+
+

@@ -1,0 +1,13 @@
+<h1>Attribute-Directives</h1>
+<p [ngClass]="{ 'error': isError, 'success': !isError }">
+    Status: {{ isError ? 'Error occurred' : 'Everything is fine' }}
+</p>
+
+<p [ngStyle]="{ 
+    'font-size': '18px', 
+    'color': isError ? 'crimson' : 'forestgreen' 
+  }">
+    This text is styled dynamically.
+</p>
+  
+  

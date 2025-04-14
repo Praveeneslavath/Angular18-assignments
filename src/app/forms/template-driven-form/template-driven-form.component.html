@@ -1,0 +1,71 @@
+<div class="container">
+    <h2>Registration Form</h2>
+  
+    <form (ngSubmit)="submitForm()" #userForm="ngForm" novalidate>
+  
+      <!-- Name Field -->
+      <div>
+        <label >Name:</label>
+        <input type="text" name="name" [(ngModel)]="user.name" required minlength="3" #names="ngModel" class="text-danger" validateName>
+        <p *ngIf="names.invalid && names.touched" class="error" >
+          Name is required (Min 3 characters)!
+        </p>
+        
+      </div>
+  
+      <!-- Email Field -->
+      <div>
+        <label>Email:<sup class="red">*</sup></label>
+        <input type="email" name="email" [(ngModel)]="user.email" required email #email="ngModel">
+        <p *ngIf="email.invalid && email.touched" class="error">
+          Enter a valid email!
+        </p>
+      </div>
+  
+      <div>
+        <label >Phone</label>
+        <input type="text" name="phone" [(ngModel)]="user.Phone" pattern="^[0-9]{10}$" #phone="ngModel">
+        <p *ngIf="phone.errors?.['pattern'] && phone.touched" class="error">
+          Enter a 10-digit phone number!
+        </p>
+        
+      </div>
+  
+      <!-- Password Field -->
+      <div>
+        <label>Password:</label>
+        <input type="password" name="password" [(ngModel)]="user.password" required minlength="6" #password="ngModel">
+        <p *ngIf="password.invalid && password.touched" class="error">
+          Password must be at least 6 characters long!
+        </p>
+      </div>
+  
+      <!-- Gender Selection -->
+      <div>
+        <label>Gender:</label>
+        <select name="gender" [(ngModel)]="user.gender" required #gender="ngModel">
+          <option value="" disabled>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <p *ngIf="gender.invalid && gender.touched" class="error">
+          Please select a gender!
+        </p>
+      </div>
+  
+      <!-- Terms & Conditions Checkbox -->
+      <div>
+        <input type="checkbox" name="terms" [(ngModel)]="user.terms" required #terms="ngModel">
+        <label for="terms">I agree to the terms and conditions</label>
+        <p *ngIf="terms.invalid && terms.touched" class="error">
+          You must agree before submitting!
+        </p>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="userForm.invalid" >Submit</button>
+  
+    </form>
+  </div>
+  
+  

@@ -1,0 +1,37 @@
+<h4>Getting Data From Parent-Component</h4>
+<app-input-dec [cdata]="pdata" [parr]="person3"></app-input-dec>
+<p>{{pdata}}</p>
+<p>{{person3|json}}</p>
+<app-input-dec></app-input-dec>
+
+<!-- output Decorator -->
+<h4>Detting Data From Child-Component</h4>
+<app-out-dec (cdata)="got($event)"></app-out-dec>
+<p>{{pdata}}</p>
+<app-out-dec></app-out-dec>
+
+<!-- ng content -->
+<h3>This Is Ng-Content</h3>
+<app-ng-content>
+    <p>This content is projected from the Parent!</p>
+    <button (click)="sendMessage()">Send Message</button>
+</app-ng-content>
+
+
+
+<h2>View Child </h2>
+<app-viewchild></app-viewchild>
+<button (click)="updateChildMessage()">Update Child Message</button>
+
+
+
+<h3>Data From Service</h3>
+{{ts.product.name}}
+<br>
+<br>
+{{ts.product.price}}
+<br>
+<br>
+{{ts.product.description}}
+<br>
+<br>
