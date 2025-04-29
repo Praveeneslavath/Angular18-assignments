@@ -12,6 +12,7 @@ import { NotfoundComponent } from './routingdemo/notfound/notfound.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
 import { ObserableComponent } from './obserable/obserable.component';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
 
 export const routes: Routes = [
     {
@@ -52,5 +53,8 @@ export const routes: Routes = [
     },
     {
         path:'Obserable', component:ObserableComponent
+    },
+    {
+        path:'ag-grid', component:AgGridComponent
     }
 ];

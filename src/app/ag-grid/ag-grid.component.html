@@ -1,0 +1,34 @@
+<div class="content" style="width: 100%; height: 100%;">
+    <!-- The AG Grid component, with Dimensions, CSS Theme, Row Data, and Column Definition -->
+    <!-- <ag-grid-angular
+      style="width: 100%; height: 500px;"
+       [rowData]="rowData"
+      [columnDefs]="colDefs" -->
+      
+    
+  </div> 
+  
+  <div style="margin: 20px;">
+    <h1>📱 AG Grid Full Demo (Angular 18)</h1>
+  
+    <!-- Controls -->
+    <input type="text" [(ngModel)]="searchValue" (input)="quickSearch()" placeholder="Search..." style="margin-bottom: 10px; padding: 5px;">
+    <button (click)="addRow()">Add Mobile</button>
+    <button (click)="deleteSelectedRows()">Delete Selected</button>
+    <button (click)="exportCSV()">Export CSV</button>
+    <!-- <button (click)="exportExcel()">Export Excel</button> -->
+  
+    <!-- Grid -->
+    <ag-grid-angular
+      style="width: 100%; height: 600px; margin-top: 20px;"
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="colDefs"
+      [defaultColDef]="defaultColDef"
+      [rowSelection]="'multiple'"
+      [pagination]="true"
+      [paginationPageSize]="5"
+      (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
+  </div>
+  
