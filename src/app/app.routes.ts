@@ -13,6 +13,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
 import { ObserableComponent } from './obserable/obserable.component';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
+import { NgModuleComponent } from './ng-module/ng-module.component';
 
 export const routes: Routes = [
     {
@@ -56,5 +57,8 @@ export const routes: Routes = [
     },
     {
         path:'ag-grid', component:AgGridComponent
+    },
+    {
+        path:'ng-module', component:NgModuleComponent
     }
 ];
